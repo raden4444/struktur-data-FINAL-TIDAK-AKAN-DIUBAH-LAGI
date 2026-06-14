@@ -50,11 +50,13 @@ def lihat_antrian():  # dipanggil saat pilihan_antrian == 1
         print("(Kosong)")
 
 def panggil_pasien():  # dipanggil saat pilihan_antrian == 2
+    # LOGIKA PRIORITAS: Cek dan panggil pasien dari antrian TINGGI dahulu (FIFO)
     if antrian_tinggi:
-        id_dipanggil = antrian_tinggi.popleft()
+        id_dipanggil = antrian_tinggi.popleft() # Mengambil pasien pertama di antrian prioritas
         label = "PRIORITAS TINGGI"
+    #  Jika antrian tinggi kosong, baru panggil dari antrian RENDAH
     elif antrian_rendah:
-        id_dipanggil = antrian_rendah.popleft()
+        id_dipanggil = antrian_rendah.popleft() # Mengambil pasien pertama di antrian reguler
         label = "REGULER"
     else:
         print("Antrian kosong! Tidak ada pasien yang menunggu.")
