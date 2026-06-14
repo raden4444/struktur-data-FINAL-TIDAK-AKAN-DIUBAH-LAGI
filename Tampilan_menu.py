@@ -3,11 +3,11 @@ import rekam_medis, antrian_pasien, laporan_harian
 
 while True:
    print ("====== SISTEM MANAJEMEN KLINIK SEHAT BERSAMA ======")
-   print ("1. Menu Pasien")
-   print ("2. Menu Antrian")
-   print ("3. Laporan Harian")
-   print ("4. Batalkan tindakan terakhir (undo)")
-   print ("0. Keluar")
+   print ("[1] Menu Pasien")
+   print ("[2] Menu Antrian")
+   print ("[3] Laporan Harian")
+   print ("[4] Batalkan tindakan terakhir (undo)")
+   print ("[0] Keluar")
    print ("Pilih dengan memasukan angka (0-4)")
    print("===================================================")
    
