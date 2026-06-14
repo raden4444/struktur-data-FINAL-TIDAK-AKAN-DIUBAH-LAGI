@@ -19,13 +19,14 @@ class Pasien:
         print("Urgensi :", self.tingkat_urgensi)
 
 def tambah_pasien():
-
+    # Mencegah ID Kosong, Duplikat, atau salah format
     while True:
         id_pasien = (input("Masukkan ID Pasien = ")).strip().upper()
         if id_pasien == "":
            print("ID pasien tidak boleh kosong")
         elif id_pasien in data_pasien:
            print("ID pasien sudah digunakan!")
+        # REKREASI REGEX : Memastikan ID harus diawali huruf 'P' dan diikuti tepat 3 digit angka
         elif not re.match(r'^P\d{3}$', id_pasien):
             print("Format ID salah! Harus berupa 'P' diikuti 3 digit angka (Contoh: P001)")
         else:
@@ -33,11 +34,13 @@ def tambah_pasien():
 
     while True:      
         Nama = input("Masukkan Nama = ")
+        # VALIDASI NAMA: Menghapus spasi sementara untuk memastikan input hanya berisi huruf (A-Z)
         if Nama.replace(" ","").isalpha():
             break
         print ("Input tidak sesuai, Mohon masukan nama anda!")
     
     while True:
+        # VALIDASI USIA: Mencegah salah input dan usia yang tidak wajar
         try:
             Usia = int(input("Masukkan Usia Pasien = "))
             if 0 < Usia < 150:
@@ -53,7 +56,7 @@ def tambah_pasien():
         print ("Masukan keluhan !")
     
     while True:
-        tingkat_urgensi = input("Tingkat urgensi (rendah/tinggi )= ").strip().upper().replace(" ","")
+        tingkat_urgensi = input("Tingkat urgensi (rendah/tinggi ) = ").strip().upper().replace(" ","")
         if tingkat_urgensi == "TINGGI" or tingkat_urgensi == "RENDAH":
             break
         else:
