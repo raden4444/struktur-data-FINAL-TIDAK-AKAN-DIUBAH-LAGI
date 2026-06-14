@@ -21,13 +21,13 @@ while True:
    if pilihan == 1:
       while True:
          print("===== Menu Pasien =====")
-         print("1. Mendaftarkan Pasien baru")
-         print("2. Mengecek Data Pasien")
-         print("3. Ubah Data Pasien")
-         print("4. Hapus Data Pasien")
-         print("5. Tambah Rekam Medis")
-         print("6. Lihat Rekam Medis")
-         print("0. Kembali")
+         print("[1] Mendaftarkan Pasien baru")
+         print("[2] Mengecek Data Pasien")
+         print("[3] Ubah Data Pasien")
+         print("[4] Hapus Data Pasien")
+         print("[5] Tambah Rekam Medis")
+         print("[6] Lihat Rekam Medis")
+         print("[0] Kembali")
          print("Pilih angka(0-6)")
          print("=========================")
          
@@ -58,10 +58,10 @@ while True:
    elif pilihan == 2:
       while True:
          print ("===== Menu Antrian =====")
-         print("1. Jumlah Antrian sekarang")
-         print("2. Panggil pasien berikutnya")
-         print("3. Tambah Antrian")
-         print("0. Kembali")
+         print("[1] Jumlah Antrian sekarang")
+         print("[2] Panggil pasien berikutnya")
+         print("[3] Tambah Antrian")
+         print("[0] Kembali")
 
          try:
             pilihan_antrian = int(input("Masukkan Angka = "))
@@ -86,11 +86,11 @@ while True:
    elif pilihan == 3:
       while True:
          print ("===== Menu Laporan Harian =====")
-         print("1. Jumlah pasien hari ini")
-         print("2. Urutan pasien")
-         print("3. Tambah Pembayaran")
-         print("4. Riwayat pembayaran")
-         print("0. Kembali")  
+         print("[1] Jumlah pasien hari ini")
+         print("[2] Urutan pasien")
+         print("[3] Tambah Pembayaran")
+         print("[4] Riwayat pembayaran")
+         print("[0] Kembali")  
 
          try: 
             pilih_laporan = int(input("Masukkan Angka = "))
