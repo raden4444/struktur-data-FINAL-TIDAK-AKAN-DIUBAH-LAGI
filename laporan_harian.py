@@ -47,3 +47,19 @@ def lihat_riwayat_pembayaran():
         print("ID      :", transaksi["id_pasien"])
         print("Nama    :", transaksi["nama"])
         print("Total   : Rp", transaksi["total"])
+
+
+def urutan_pasien():
+    if not data_pasien:
+        print("Belum ada data pasien.")
+        return
+        
+    daftar_pasien = sorted(
+        data_pasien.values(),
+        key=lambda pasien: pasien.id_pasien
+    )
+    
+    print(f"\n====== DAFTAR TOTAL {len(daftar_pasien)} PASIEN (URUT ID) ======")
+    for pasien in daftar_pasien:
+        pasien.tampilkan_data()
+        print("-" * 35)
