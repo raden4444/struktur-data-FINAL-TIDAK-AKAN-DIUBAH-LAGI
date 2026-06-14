@@ -4,20 +4,8 @@ import rekam_medis, antrian_pasien, laporan_harian
 while True:
    print ("====== SISTEM MANAJEMEN KLINIK SEHAT BERSAMA ======")
    print ("1. Menu Pasien")
-     #print(1. Mendaftarkan Pasien baru)
-     #print(2. Mengecek Data Pasien)
-       #print (1. Hapus data)
-       #print (2. Perbarui Data)
-       #print (3. Riwayat rekam medis)
-       #print (3. mencatat tindakan terkahir) 
-          #berisi diagnosa, resep, tindakan.
    print ("2. Menu Antrian")
-     #print("1. Jumlah Antrian sekarang")
-     #print("2. Masukkan ke dalam antrian")
-     #print("3. Panggil pasien berikutnya")
    print ("3. Laporan Harian")
-     #print("1. Jumlah pasien hari ini")
-     #print("2. Riwayat pembayaran")
    print ("4. Batalkan tindakan terakhir (undo)")
    print ("0. Keluar")
    print ("Pilih dengan memasukan angka (0-4)")
@@ -99,9 +87,10 @@ while True:
       while True:
          print ("===== Menu Laporan Harian =====")
          print("1. Jumlah pasien hari ini")
-         print("2. Tambah Pembayaran")
-         print("3. Riwayat pembayaran")
-         print("0. Kembali") 
+         print("2. Urutan pasien")
+         print("3. Tambah Pembayaran")
+         print("4. Riwayat pembayaran")
+         print("0. Kembali")  
 
          try: 
             pilih_laporan = int(input("Masukkan Angka = "))
@@ -111,12 +100,12 @@ while True:
 
          if pilih_laporan == 1:
             laporan_harian.jumlah_pasien_hari_ini()
-            #tampilkan jumlah pasien hari ini
          elif pilih_laporan == 2:
-            laporan_harian.tambah_pembayaran(data_pasien)
+            laporan_harian.urutan_pasien()
          elif pilih_laporan == 3:
+            laporan_harian.tambah_pembayaran(data_pasien)
+         elif pilih_laporan == 4:
             laporan_harian.lihat_riwayat_pembayaran()
-            #tampilkan riwayat pembayaran pasien
          elif pilih_laporan == 0:
             break
          else:
